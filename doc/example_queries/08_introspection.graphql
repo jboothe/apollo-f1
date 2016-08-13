@@ -1,0 +1,10 @@
+{
+  __type(name: "Driver") {
+    name 
+    fields {
+      name 
+      description
+      type { name }
+    }
+  }
+}

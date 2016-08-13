@@ -1,0 +1,20 @@
+{
+  allRaceResults(year:2016, limit:100) {
+    round
+    driverResults {
+      ...driversFragment
+    }
+  }
+}
+
+fragment driversFragment on DriverResult {
+    position
+    driver {
+      ...driverFragment
+    }
+}
+
+fragment driverFragment on Driver {
+  fullName
+  permanentNumber
+}

@@ -1,0 +1,25 @@
+{
+  allRaceResults(year:2016, round:12) {
+    season
+    round
+    raceName
+    driverResults {
+      driver {
+        ...driverFragment
+      }
+      konstruktor {
+        ...constrFragment
+      }
+    }
+  }
+}
+
+fragment driverFragment on Driver {
+  fullName
+  permanentNumber
+}
+
+fragment constrFragment on Konstruktor {
+  constructorId
+  name
+}

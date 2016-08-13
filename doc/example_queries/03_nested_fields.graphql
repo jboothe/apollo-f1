@@ -1,0 +1,15 @@
+{
+  allRaceResults(year:2016) {
+    round
+    raceName
+    driverResults {
+      driver {
+        fullName
+      }
+      konstruktor {
+        name
+        nationality
+      }
+    }
+  }
+}

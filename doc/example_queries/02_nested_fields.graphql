@@ -1,0 +1,8 @@
+{
+  circuit (circuitId:"spa"){
+    location {
+      lat
+      long
+    }
+  }
+}

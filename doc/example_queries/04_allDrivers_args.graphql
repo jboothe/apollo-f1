@@ -1,0 +1,8 @@
+{
+  allDrivers(year:2016, round:12, offset:2, limit:3) {
+    driverId
+    givenName
+    familyName
+    dateOfBirth
+  }
+}

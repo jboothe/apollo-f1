@@ -1,0 +1,16 @@
+{
+  allRaceResults(year:2016, round:12) {
+    round
+    raceName
+    driverResults {
+      driver {
+        ...driverFragment
+      }
+    }
+  }
+}
+
+fragment driverFragment on Driver {
+  fullName
+  permanentNumber
+}
