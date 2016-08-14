@@ -1,4 +1,4 @@
-#F1 Apollo Server Wrapper
+![GitHub Logo](./doc/images/apollo-64-opq.gif) #F1 Apollo Server Wrapper
 
 A GraphQL wrapper around [Ergast F1 API](http://ergast.com/mrd/) built using Apollo Server.
 
