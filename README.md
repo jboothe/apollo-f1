@@ -34,7 +34,7 @@ explore the API.
 
 ## Development Server
 
-A development server that watches for changes can be ran with:
+A development server that watches for changes can be run with:
 
 ```sh
 npm run dev
