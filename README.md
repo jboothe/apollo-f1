@@ -2,7 +2,7 @@
 
 A GraphQL wrapper around [Ergast F1 API](http://ergast.com/mrd/) built using Apollo Server.
 
-![GitHub Logo](/doc/images/Apollo-F1.gig)
+![GitHub Logo](./doc/images/Apollo-F1.gif)
 
 Inspired by Nick Nance's [Apollo SWAPI](https://github.com/nnance/swapi-apollo).
 
