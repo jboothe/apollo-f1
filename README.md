@@ -1,9 +1,9 @@
 #F1 Apollo Server Wrapper 
-![GitHub Logo](./doc/images/apollo-64-opq.gif)
+![Apollo Logo](./doc/images/apollo-64-opq.gif) ![GraphQL Logo](./doc/images/GraphQL_logo_64.png)
 
 A GraphQL wrapper around [Ergast F1 API](http://ergast.com/mrd/) built using Apollo Server.
 
-![GitHub Logo](./doc/images/Apollo-F1.gif) ![GitHub Logo](./doc/images/GraphQL_logo_64.png)
+![GitHub Logo](./doc/images/Apollo-F1.gif) 
 
 Inspired by Nick Nance's [Apollo SWAPI](https://github.com/nnance/swapi-apollo).
 
