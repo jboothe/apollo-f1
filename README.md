@@ -1,6 +1,9 @@
-# Apollo Server F1 API Wrapper 
+<h1>Apollo Server F1 API Wrapper &nbsp; &nbsp;
+<img src="./doc/images/apollo-64-opq.gif" style="float: left;">
+<img src="./doc/images/GraphQL_logo_64.png" style="float: left;">
+</h1>
 
-![Apollo Logo](./doc/images/apollo-64-opq.gif) ![GraphQL Logo](./doc/images/GraphQL_logo_64.png) A GraphQL wrapper around [Ergast F1 REST API](http://ergast.com/mrd/) built using Apollo Server.
+A GraphQL wrapper around [Ergast F1 REST API](http://ergast.com/mrd/) built using Apollo Server.
 
 ![GitHub Logo](./doc/images/Apollo-F1.gif) 
 
