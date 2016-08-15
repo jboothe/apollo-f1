@@ -1,4 +1,4 @@
-#F1 Apollo Server Wrapper 
+#Apollo Server F1 API Wrapper 
 
 ![Apollo Logo](./doc/images/apollo-64-opq.gif) ![GraphQL Logo](./doc/images/GraphQL_logo_64.png) A GraphQL wrapper around [Ergast F1 API](http://ergast.com/mrd/) built using Apollo Server.
 
@@ -7,14 +7,14 @@
 
 ##What is Apollo Server & GraphQL
 
-Apollo Server is a data stack for modern applications built with [GraphQL](https://medium.com/apollo-stack/the-basics-of-graphql-in-5-links-9e1dc4cac055#.yr1awqpig),  
-a technology developed and used by Facebook in 2012 and open sourced in July 2015. If you're using Facebook, 
+Apollo Server is a data stack for modern applications built with [GraphQL](https://medium.com/apollo-stack/the-basics-of-graphql-in-5-links-9e1dc4cac055#.yr1awqpig), a 
+technology developed and used by Facebook in 2012 and open sourced in July 2015. If you're using Facebook, 
 you're getting your data via GraphQL. 
 
 The benefits of using Apollo Server/GraphQL as a service layer are abundant; generally there are three main benefits:
 
-1. **Exact Data** - fetch the precise data your view needs - no more, no less.
-2. **Any Source** - retrieve data from SQL, Mongo, REST or all of the above in a single call.
+1. **Exact Data** - fetch the precise data your view needs fast - no more, no less.
+2. **Any Source** - retrieve data from SQL, NoSQL, REST or all of the above in a single call.
 3. **Unobtrusive** - slides into any server stack without significant integration. 
 
 
@@ -23,9 +23,9 @@ The benefits of using Apollo Server/GraphQL as a service layer are abundant; gen
 Apollo/GraphQL is not a data storage engine. It is not a graph database. It is a data service layer that revolutionizes
 data retrieval. Querying data is easy and straightforward with simple JSON notation - regardless of your data storage engine.
 
-For example, here's a basic query to get a list of races' raceName. (Yes, commas are optional.)   
+For example, here's a basic query to get a list of races. (Yes, commas are optional.)   
 
-```
+```GraphQL
 {
   allRaces {
     raceName
@@ -35,7 +35,7 @@ For example, here's a basic query to get a list of races' raceName. (Yes, commas
 
 The query above yields the JSON object below shaped exactly as your request. This eliminates over and under fetching.
 
-```
+```JSON
 {
   "data": {
     "allRaces": [
@@ -51,7 +51,7 @@ The query above yields the JSON object below shaped exactly as your request. Thi
 
 Refine results by passing arguments.
 
-```
+```GraphQL
 {
   allRaces(year:2016) {
     raceName
@@ -61,9 +61,10 @@ Refine results by passing arguments.
 
 ###Nested Data
 
-If you need nested data without myriad of round trips, no problem. 
+If you need nested data without myriad of round trips, no problem. The query below retrieves all the races 
+in 1950 and includes the circuit and location of the race track. 
 
-```
+```GraphQL
 {
   allRaces(year:1950) {
     raceName
@@ -89,23 +90,25 @@ eliminates the need to create a multitude of custom RPC (aka ad hoc) endpoints n
 ##Multiple Data Sources
 
 Another beauty of Apollo Server is it's ability to access any data source including REST API's. 
-What's more is any one call can be be mix of of data sources. 
+What's more is any single call can be be mix of one or more data sources. The Apollo Server makes
+all the calls to the appropriate data sources and bundles and sends back a single object to the client. 
 
 ##REST Wrapping
 
-A side benefit of that is that you can wrap any existing REST API with Apollo Server/GraphQL 
-so a once chatty or bloated call can now be tailored to the exact data a _view_ needs. 
-You'll see more REST API's being wrapped with Apollo Server/GraphQL. Here are a few:
+Another benefit of Apollo Server is wrapping any existing REST API so once chatty or 
+bloated calls can now be tailored to the exact data a _view_ needs in a single call. 
+Over time more REST API's will be wrapped with Apollo Server/GraphQL. Here are a few public ones:
 
 * [Apollo SWAPI](https://github.com/nnance/swapi-apollo)
 * [GraphQL Hub](https://www.graphqlhub.com/)
 
 
 This project is an Apollo Server wrap of the Ergast F1 REST API which is leans towards an RPC style API
-as opposed to a Resource style API. Given that, the major benefit from wrapping this API is minimize 
+as opposed to a Resource style API. Given that, the major benefit from wrapping this API is to minimize 
 response object bloat which is friendlier to mobile apps. 
 
-Experience this revolutionary data retrieval technology for yourself and see the benefits.    
+I encourage anyone who needs to get data to a client to experience this revolutionary data retrieval 
+technology for yourself.
 
 This project uses:
 
