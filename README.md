@@ -149,5 +149,16 @@ A development server that watches for changes can be run with:
 npm run dev
 ```
 
+
+## Resources
+
+If had to pick a few resources to get up to speed on GraphQL, these would rise to the top:
+* [From REST to GraphQL - by Jacob Gillespie](https://blog.jacobwgillespie.com/from-rest-to-graphql-b4e95e94c26b#.8yzsp05lf)
+* [Video: Zero to GraphQL in 30 Minutes](https://www.youtube.com/watch?v=UBGzsb2UkeY&spfreload=1)
+* [Workshop: Let's Learn GraphQL - by Kadira](https://learngraphql.com/)
+* [Tutorial: How to build a GraphQL server - by Jonas Helfer](https://medium.com/apollo-stack/tutorial-building-a-graphql-server-cddaa023c035#.ysopbf285)
+Bonus: [Awesome-GraphQL List](https://github.com/chentsulin/awesome-graphql)
+
 ### Credits
+
 This project was inspired by Nick Nance's [Apollo SWAPI](https://github.com/nnance/swapi-apollo).
