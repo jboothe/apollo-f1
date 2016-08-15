@@ -1,24 +1,25 @@
-#Apollo Server F1 API Wrapper 
+# Apollo Server F1 API Wrapper 
 
-![Apollo Logo](./doc/images/apollo-64-opq.gif) ![GraphQL Logo](./doc/images/GraphQL_logo_64.png) A GraphQL wrapper around [Ergast F1 API](http://ergast.com/mrd/) built using Apollo Server.
+![Apollo Logo](./doc/images/apollo-64-opq.gif) ![GraphQL Logo](./doc/images/GraphQL_logo_64.png) A GraphQL wrapper around [Ergast F1 REST API](http://ergast.com/mrd/) built using Apollo Server.
 
 ![GitHub Logo](./doc/images/Apollo-F1.gif) 
 
 
-##What is Apollo Server & GraphQL
+## What is Apollo Server & GraphQL
 
 Apollo Server is a data stack for modern applications built with [GraphQL](https://medium.com/apollo-stack/the-basics-of-graphql-in-5-links-9e1dc4cac055#.yr1awqpig), a 
-technology developed and used by Facebook in 2012 and open sourced in July 2015. If you're using Facebook, 
+technology developed by Facebook in 2012 and open sourced in July 2015. If you've used Facebook in the past few years, 
 you're getting your data via GraphQL. 
 
-The benefits of using Apollo Server/GraphQL as a service layer are abundant; generally there are three main benefits:
+The benefits of using Apollo Server/GraphQL as a data service layer are abundant. Generally speaking, there are the main benefits:
 
-1. **Exact Data** - fetch the precise data your view needs fast - no more, no less.
+1. **Exact Data** - fetch the precise data your view needs, fast! No more, no less.
 2. **Any Source** - retrieve data from SQL, NoSQL, REST or all of the above in a single call.
-3. **Unobtrusive** - slides into any server stack without significant integration. 
+3. **Unobtrusive** - slides into any server stack without demands on server side engineers.
+4. **Self Documenting** - model objects are strongly typed, hence discoverable and self documenting.
 
 
-###What It's Not
+### What It's Not
 
 Apollo/GraphQL is not a data storage engine. It is not a graph database. It is a data service layer that revolutionizes
 data retrieval. Querying data is easy and straightforward with simple JSON notation - regardless of your data storage engine.
@@ -41,13 +42,13 @@ The query above yields the JSON object below shaped exactly as your request. Thi
     "allRaces": [
       { "raceName": "British Grand Prix" },
       { "raceName": "Monaco Grand Prix" },
-      { n... }
+      { ... }
     ]
   }
 }
 ```
 
-###Parameters
+### Parameters
 
 Refine results by passing arguments.
 
@@ -59,7 +60,7 @@ Refine results by passing arguments.
 }
 ```
 
-###Nested Data
+### Nested Data
 
 If you need nested data without myriad of round trips, no problem. The query below retrieves all the races 
 in 1950 and includes the circuit and location of the race track. 
@@ -80,20 +81,20 @@ in 1950 and includes the circuit and location of the race track.
 }
 ```
 
-##Custom Endpoints
+## Custom Endpoints
 
 So often custom REST endpoints are needed to satisfy _view_ requirements and their variants. 
 Apollo Server defines **one** endpoint and lets each view define the data it needs. This flexibility
-eliminates the need to create a multitude of custom RPC (aka ad hoc) endpoints needed with REST API's.  
+eliminates the need to create a multitude of custom RPC (aka ad hoc) endpoints typical with REST API's.  
 
 
-##Multiple Data Sources
+## Multiple Data Sources
 
 Another beauty of Apollo Server is it's ability to access any data source including REST API's. 
 What's more is any single call can be be mix of one or more data sources. The Apollo Server makes
-all the calls to the appropriate data sources and bundles and sends back a single object to the client. 
+all the calls to the appropriate data sources and sends back a single object to the client. 
 
-##REST Wrapping
+## REST Wrapping
 
 Another benefit of Apollo Server is wrapping any existing REST API so once chatty or 
 bloated calls can now be tailored to the exact data a _view_ needs in a single call. 
@@ -144,5 +145,5 @@ A development server that watches for changes can be run with:
 npm run dev
 ```
 
-###Credits
+### Credits
 This project was inspired by Nick Nance's [Apollo SWAPI](https://github.com/nnance/swapi-apollo).
