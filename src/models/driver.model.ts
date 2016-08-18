@@ -1,7 +1,12 @@
-import BaseModel from './base'
+import F1Connector from '../connectors/f1'
 
-export default class Driver extends BaseModel {
+export default class Driver {
+  protected connector: F1Connector
 
+  constructor(connector) {
+    this.connector = connector
+  }
+  
   public getDrivers(year?:number, round?:number, offset?: number, limit?: number) {
     console.log('getDrivers called');
     return new Promise<any>((resolve, reject) => {
@@ -16,8 +21,7 @@ export default class Driver extends BaseModel {
   public getDriver(driverId: string) {
     return new Promise<any>((resolve, reject) => {
       this.connector.fetch(`/drivers/${driverId}.json`).then((data) => {
-        const item = data.MRData.DriverTable.Drivers[0];
-        resolve(item);
+        resolve(data.MRData.DriverTable.Drivers[0]);
       })
     })
   }

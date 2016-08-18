@@ -1,12 +1,5 @@
-import driver from './driver'
-import season from './season'
-import circuit from './circuit'
-import location from './location'
-import race from './race'
-import raceResult from './race-result'
-import driverResult from './driver-result'
-import konstruktor from './constructor'
-import root from './root'
+import driver from './driver.schema'
+import root from './root.schema'
 
 const schema = `
   schema {
@@ -16,13 +9,6 @@ const schema = `
 
 export default [
   driver,
-  season,
-  circuit,
-  location,
-  race,
-  raceResult,
-  driverResult,
-  konstruktor,
   root,
   schema
 ]
